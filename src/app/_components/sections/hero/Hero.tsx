@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/app/_components/ui/Container";
 import Title from "./Title";
+import { SimulateButton } from "@/app/_components/auth/SimulateButton";
 
 export default function Hero() {
   return (
@@ -27,13 +28,15 @@ export default function Hero() {
         className="text-center absolute mt-[13rem]
       left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
       z-30 
-      xl:mt-[18.5rem] 
+      xl:mt-[19rem] 
       font-geist"
       >
         <h2 className="font-bold text-xl">Rovera X1</h2>
         <p className="text-base font-light xl:text-xl">
           100% elétrico, 0% juros.
         </p>
+
+        <SimulateButton />
       </div>
     </Container>
   );

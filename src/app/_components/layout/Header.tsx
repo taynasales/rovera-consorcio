@@ -1,5 +1,5 @@
-import { Container } from "@/app/_components/ui/Container";
 import Link from "next/link";
+import { Container } from "../ui/Container";
 import RoveraWordmark from "@/assets/rovera-wordmark.svg";
 
 export default function Header() {

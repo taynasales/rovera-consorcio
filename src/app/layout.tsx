@@ -29,7 +29,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${goldman.variable} ${geist.variable}`}>
-      <body className="bg-black text-white antialiased font-geist">
+      <body
+        className="
+      bg-black text-white antialiased font-geist
+      xl:relative
+      xl:before:content-[''] xl:before:absolute xl:before:pointer-events-none
+      xl:before:top-[56px] xl:before:left-[-80px]
+      xl:before:h-[266px] xl:before:w-[800px]
+      xl:before:rotate-[30deg] xl:before:rounded-full
+      xl:before:bg-[#ffffff59] xl:before:blur-[112px] xl:before:opacity-60
+      xl:before:z-30
+    "
+      >
         <Header />
         <main>{children}</main>
       </body>
