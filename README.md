@@ -3,21 +3,25 @@
 1. **Clonar e Instalar:**
 
    ```bash
-   git clone [https://github.com/taynasales/rovera-consorcio](https://github.com/taynasales/rovera-consorcio)
+   git clone https://github.com/taynasales/rovera-consorcio
    cd rovera-consorcio
    npm install
-   npm run dev
    ```
 
-   Acesse: http://localhost:3000
-
-2. **Acesso para Avaliação (Usuário Teste)**
-   Para validar o fluxo de autenticação e a área logada (Simulação):
+2. **Configurar chaves de autenticação no arquivo .env.local**
 
 ```bash
-E-mail: tayna.sales.dev@gmail.com
+   AUTH_SECRET="rode 'npx auth secret' no terminal para gerar"
+   AUTH_GOOGLE_ID="seu_client_id_aqui"
+   AUTH_GOOGLE_SECRET="seu_client_secret_aqui"
+   NEXTAUTH_URL="http://localhost:3000"
+```
 
-Senha: P8+Icm6-C=6&
+2. **Executar**
+
+```bash
+npm run dev
+Acesse: http://localhost:3000
 ```
 
 ## Decisões Técnicas Mobile
