@@ -9,15 +9,15 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   iconClassName?: string;
 }
 
-export function ButtonButton({
+export function Button({
   isLoading,
   disabled,
   children,
   icon,
   bg = "bg-transparent",
-  border = "border-[#A6F6FF]",
-  text = "text-white",
-  iconClassName = "text-[#A6F6FF]",
+  border = "border-[var(--color-accent)]",
+  text = "text-[var(--color-accent)]",
+  iconClassName = "text-[var(--color-accent)]",
   className,
   ...props
 }: ButtonProps) {
@@ -26,7 +26,10 @@ export function ButtonButton({
       disabled={isLoading || disabled}
       className={`
         group flex items-center justify-center px-6 py-3
-        border skew-x-[-20deg] transition-all duration-200
+        border rounded-[8px] skew-x-[-20deg] transition-all duration-200
+        font-goldman text-[16px] lg:text-[20px] leading-[1] text-center lowercase leading-[0] cursor-pointer
+        transition-all duration-500 ease-in-out
+        hover:border-[#a6f6ff]/60
         ${bg} 
         ${border}
         ${className || ""}

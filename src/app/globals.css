@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #000;
-  --color-primary: #fff;
+  --font-goldman: var(--font-goldman);
+  --font-geist: var(--font-geist);
+
   --color-accent: #a6f6ff;
 }

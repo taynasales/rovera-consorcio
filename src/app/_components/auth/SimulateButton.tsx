@@ -2,21 +2,23 @@
 
 import { useTransition } from "react";
 import { loginAction } from "@/app/actions";
-import { ButtonButton } from "@/app/_components/ui/ButtonButton";
+import { Button } from "@/app/_components/ui/Button";
 import { FullScreenLoader } from "@/app/_components/ui/FullScreenLoader";
+import { ArrowRightIcon } from "lucide-react";
 
 export function SimulateButton() {
   const [isPending, startTransition] = useTransition();
 
   return (
     <>
-      <ButtonButton
+      <Button
         disabled={isPending}
         onClick={() => startTransition(async () => await loginAction())}
-        className="text-accent"
+        icon={<ArrowRightIcon />}
+        className="mt-4"
       >
-        Simule Agora
-      </ButtonButton>
+        Simule agora
+      </Button>
       {isPending && <FullScreenLoader />}
     </>
   );
